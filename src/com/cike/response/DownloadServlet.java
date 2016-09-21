@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Demo
+ * 文件下载
  */
 @WebServlet("/download")
 public class DownloadServlet extends HttpServlet {

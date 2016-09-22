@@ -13,15 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TestServlet
+ * 验证码
  */
 @WebServlet(name = "test", urlPatterns = { "/test" })
 public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//在内存中生成图片
 		BufferedImage image = new BufferedImage(300, 500, BufferedImage.TYPE_INT_BGR);
@@ -39,11 +35,7 @@ public class TestServlet extends HttpServlet {
 		ImageIO.write(image, "jpg", response.getOutputStream());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

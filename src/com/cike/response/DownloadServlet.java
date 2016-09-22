@@ -32,7 +32,7 @@ public class DownloadServlet extends HttpServlet {
 		}
 		String agent = request.getHeader("User-Agent");
 		System.out.println(agent);
-		// 判断浏览器
+		// 判断浏览器防止中文乱码
 		if (agent.contains("MSIE")) {
 			fileName = URLEncoder.encode(fileName, "UTF-8");
 		}
